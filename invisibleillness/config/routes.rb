@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-    resources :illnesses do
-      resources :people
-    end
+    resources :illnesses
+    resources :people
+
 
     root 'welcome#index'
 
