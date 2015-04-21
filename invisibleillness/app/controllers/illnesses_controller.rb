@@ -1,7 +1,6 @@
 class IllnessesController < ApplicationController
 
   def index
-    @illnesses = Illness.all
   end
 
  def show

@@ -20,8 +20,9 @@
   </p>
 
   <p>
-  <%= f.label :illness %><br>
-  <%= f.select :illness, [['Anxiety','anxiety'],['IBD','ibd'],['Lupus','lupus']] %>
+  <%= f.label :illness_id %><br>
+  <%= f.collection_select :illness_id, @illnesses, :id, :name %>
+
   </p>
 
   <p>
@@ -36,4 +37,5 @@
 
 
 <h1>Thanks for submitting!</h1>
+
 <%= link_to("Illnesses", illnesses_path) %>
