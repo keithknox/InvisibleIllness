@@ -1,0 +1,10 @@
+<h1> *****PAGE 4****** </h1>
+
+<h2> <%= @person.name %>
+  <h2> <img src="<%= @person.image_url %>" /></h2>
+<hr>
+
+<h2> Illness Description<h2>
+<h2> About <%= @person.illness.name %> </h2>
+<hr>
+<%= button_to('Submit User Story', new_illness_person_path(@person.illness), method: :get) %>
