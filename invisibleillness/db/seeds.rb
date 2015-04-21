@@ -1,7 +1,19 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+require 'roo'
+# illnesses_sheet = Roo::Excelx.new("app/db/illness.xlsx", extension: :xlsx)
+# people_sheet = Roo::Excelx.new("app/db/person.xlsx", extension: :xlsx)
 #
-# Examples:
+# illnesses = []
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+#
+# Illness.create
+
+
+anxiety = Illness.create(name:"Anxiety", statistics:"2 out of 5", blurb:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sedquis purus. Morbi nec mi sed risus viverra interdum vitae sed ex. Aliquam erat volutpat. Donec eu ipsum mollis, pulvinar mauris eleifend, pretium lorem. Nulla euismod sem sed enim gravida rutrum. Donec varius odio tortor, quis mollis justo congue sit amet. Integer cursus at turpis dapibus dignissim.", quote:"blah blahhhh", charity_name:"Blue Cross", charity_url:"www.wesbite")
+ibd = Illness.create(name:"IBD", statistics:"4 out of 5", blurb:"Lorem ipsum adipiscing elit. Nulla sed faucibus magna, eget gravida neque. Donec elit mauris, laoreet quis porta eleifend, venenatis a lorem. Duis ligula est, luctus non convallis in, vulputate elementum velit. Nam ipsum tortor, pellentesque vitae rutrum sed, fringilla quis purus. Morbi nec mi sed risus viverra interdum vitae sed ex. Aliquam erat volutpat. Donec eu ipsum mollis, pulvinar mauris eleifend, pretium lorem. Nulla euismod sem sed enim gravida rutrum. Donec varius odio tortor, quis mollis justo congue sit amet. Integer cursus at turpis dapibus dignissim.", quote:"blah  blah", charity_name:"Red Cross", charity_url:"www.wesbite.com")
+lupus = Illness.create(name:"Lupus", statistics:"1 out of 5", blurb:"Lorem ipsum dolor sit ametulla sed faucibus magna, eget gravida neque. Dporta eleifend, venenatis a lorem. Duis ligula est, luctus non convallis in, vulputate elementum velit. Nam ipsum tortor, pellentesque vitae rutrum sed, fringilla quis purus. Morbi nec mi sed risus viverra interdum vitae sed ex. Aliquam erat volutpat. Donec eu ipsum mollis, pulvinar mauris eleifend, pretium lorem. Nulla euismod sem sed enim gravida rutrum. Donec varius odio tortor, quis mollis justo congue sit amet. Integer cursus at turpis dapibus dignissim.", quote:"blah blah blah", charity_name:"Red Blue", charity_url:"www.wesbite.com")
+
+anxiety.people.create(name:"Nic", image_url:"www.wesbite.com", video_url: "www.wesbite.com", story:"Blah de blah", charity_name:"Charity", charity_url:"www.wesbite.com", personal_website:"www.wesbite.com")
+ibd.people.create(name:"Biboy", image_url:"www.wesbite.com", video_url: "www.wesbite.com", story:"Yaddah yaddah yaddah", charity_name:"Charity", charity_url:"www.wesbite.com", personal_website:"www.wesbite.com")
+ibd.people.create(name:"Keith", image_url:"www.wesbite.com", video_url: "www.wesbite.com", story:"croikey", charity_name:"Charity", charity_url:"www.wesbite.com", personal_website:"www.wesbite.com")
+lupus.people.create(name:"Reena", image_url:"www.wesbite.com", video_url: "www.wesbite.com", story:"words!", charity_name:"Charity", charity_url:"www.wesbite.com", personal_website:"www.wesbite.com")

@@ -1,0 +1,49 @@
+<%= link_to("Illness Home Page", '/illnesses') %>
+
+<h1>Show all people with Illness 1</h1>
+
+  <!-- <%#= link_to("Person 1 with Illness 1", illness_people_path) %> -->
+
+
+
+
+
+
+
+<br>
+<h2>Submit your story here:</h2>
+
+  <%= form_for :people do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.label :image_url %><br>
+      <%= f.text_field :image_url %>
+    </p>
+
+    <p>
+      <%= f.label :video_url %><br>
+      <%= f.text_field :video_url %>
+    </p>
+
+    <p>
+    <%= f.label :illness %><br>
+    <%= f.select :illness, [['Anxiety','anxiety'],['IBD','ibd'],['Lupus','lupus']] %>
+    </p>
+
+    <p>
+      <%= f.label :story %><br>
+      <%= f.text_area :story %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+
+
+  <h1>Thanks for submitting!</h1>
+  <%= link_to("Illnesses", illnesses_path) %>
