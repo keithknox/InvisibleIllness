@@ -1,4 +1,6 @@
 <h1>INDENTIFY THE SICK PEOPLE</h1>
 
-<!-- <%#= link_to("Illness1", illness_path(:id)) %> -->
-<%= link_to("Illness1", '/illnesses/show') %>
+
+<% @illnesses.each do |illness| %>
+<%= link_to(illness.name, illness_path(illness)) %>
+<% end %>

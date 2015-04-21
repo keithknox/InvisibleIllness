@@ -1,8 +1,8 @@
 class IllnessesController < ApplicationController
 
-def index
-@illnesses = Illness.all
-end
+  def index
+    @illnesses = Illness.all
+  end
 
 
 end
