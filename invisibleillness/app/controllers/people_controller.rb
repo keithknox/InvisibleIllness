@@ -5,6 +5,7 @@ class PeopleController < ApplicationController
   end
 
   def show
+    @people = Person.all
     @person = Person.find(params[:id])
   end
 
