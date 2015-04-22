@@ -5,6 +5,7 @@
 
 <!-- <h1> *****PAGE 3****** </h1> -->
 <% if user_signed_in? %>
+  <h1>You are logged in as an admin</h1>
   <%= link_to("Admin Home", '/admin') %>
   <%= button_to('Delete Story', @person, method: :delete) %>
   <%= button_to('Edit Story', edit_person_path(@person), method: :get) %>
