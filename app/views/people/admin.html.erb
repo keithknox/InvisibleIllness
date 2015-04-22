@@ -1,5 +1,6 @@
 <h1>Admin Page </h1>
-
+<h3>(<%= current_user.email %> you are logged in)</h3>
+<hr>
 <% @people.each do |person| %>
   <h2> <%= person.name %></h2>
   <h2> <img src="<%= person.image_url %>" width=200/></h2>
