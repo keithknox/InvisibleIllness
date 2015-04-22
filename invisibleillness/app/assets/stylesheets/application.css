@@ -52,24 +52,6 @@
   font-weight: bold;
 }
 
-
-
- /*.description{
-   padding-top: 25px;
-   padding-left: 25px;
-   font-family: Helvetica;
-   font-size: 18px;
-   height: 400px;
-   width: 860px;
-   background-color: white;
-   border: 2px solid;
-   border-radius: 50px;
-   -webkit-animation-delay: 2s;
-   animation-delay: 2s;
-
-   }*/
-
-
  .round-button {
  	width:7.5%;
    }
@@ -105,3 +87,5 @@
      font-weight:bold;
      text-decoration:none;
  }
+
+ 
