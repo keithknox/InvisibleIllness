@@ -1,14 +1,18 @@
-<h1> *****PAGE 3****** </h1>
-<h2><%= link_to "Home", '/' %></h2>
-<h2><%= link_to "Edit Story", edit_person_path(@person) %></h2>
+<header><%= link_to(image_tag("usa_today_logo.png"), '/')%>
+<%= link_to("#InvisibleIllness", 'https://twitter.com/hashtag/InvisibleIllness', :target => "_blank") %>
+</header>
+
+
+<!-- <h1> *****PAGE 3****** </h1> -->
 <%= button_to('Delete Story', @person, method: :delete) %>
+<%= button_to('Edit Story', edit_person_path(@person), method: :get) %>
 
 <h2> <%= @person.name %></h2>
-<h2> <img src="<%= @person.image_url %>" /></h2>
+<h2> <img src="<%= @person.image_url %>" width=200/></h2>
 <h2> <%= @person.story %></h2>
-<h2> Charity: <%= @person.charity_name %></h2>
-<h2> Charity Website: <%= @person.charity_url %></h2>
-<h2> Personal Website: <%= @person.personal_website %></h2>
+<h2>Donate:</h2>
+<h2><a href="<%= @person.charity_url %>"><%= @person.charity_name %></a></h2>
+<h2> <a href="<%= @person.personal_website %>">Personal Website</a></h2>
 
 <h2>
 <% other_people = @people.where.not(id: @person.id) %>
