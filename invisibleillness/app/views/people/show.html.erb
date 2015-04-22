@@ -4,8 +4,11 @@
 
 
 <!-- <h1> *****PAGE 3****** </h1> -->
-<%= button_to('Delete Story', @person, method: :delete) %>
-<%= button_to('Edit Story', edit_person_path(@person), method: :get) %>
+<% if user_signed_in? %>
+  <%= link_to("Admin Home", '/admin') %>
+  <%= button_to('Delete Story', @person, method: :delete) %>
+  <%= button_to('Edit Story', edit_person_path(@person), method: :get) %>
+<% end %>
 
 <h2> <%= @person.name %></h2>
 <h2> <img src="<%= @person.image_url %>" width=200/></h2>

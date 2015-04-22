@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
 #current_user
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:new, :index, :show]
 
   def index
     @people = Person.all
@@ -43,6 +43,11 @@ class PeopleController < ApplicationController
     @person.destroy
     redirect_to people_path
   end
+
+  def admin
+    @people = Person.all
+  end
+
 
   private
 

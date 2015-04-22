@@ -1,0 +1,12 @@
+<h1>Admin Page </h1>
+
+<% @people.each do |person| %>
+  <h2> <%= person.name %></h2>
+  <h2> <img src="<%= person.image_url %>" width=200/></h2>
+  <h2> <%= person.story %></h2>
+  <%= button_to('Delete Story', person, method: :delete) %>
+  <%= button_to('Edit Story', edit_person_path(person), method: :get) %>
+  <hr>
+<% end %>
+
+<h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
