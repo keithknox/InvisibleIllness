@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 
 
 <h1>INDENTIFY THE SICK PEOPLE</h1>
+=======
+<h1> *****PAGE 2****** </h1>
+
+<h1>WHO HAS AN ILLNESS?</h1>
+>>>>>>> master
 
 
 <% @illnesses.each do |illness| %>
-<%= link_to(illness.name, illness_path(illness)) %>
+
+<!-- <%#= image_tag illness.people.first.image_url %> -->
+
+<%= link_to(image_tag(illness.people.first.image_url), illness_path(illness)) %>
 <% end %>

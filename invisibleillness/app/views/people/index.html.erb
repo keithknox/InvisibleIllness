@@ -1,2 +1,8 @@
-<h1>We are people with Illness 1</h2>
-  
+<h1> *****PAGE 2****** </h1>
+
+<h1>WHO HAS AN ILLNESS?</h1>
+
+
+<% @people.each do |person| %>
+<%= link_to(image_tag(person.image_url), person_path(person)) %>
+<% end %>
