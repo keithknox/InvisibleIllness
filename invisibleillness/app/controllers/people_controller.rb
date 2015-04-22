@@ -1,4 +1,6 @@
 class PeopleController < ApplicationController
+#current_user
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @people = Person.all
