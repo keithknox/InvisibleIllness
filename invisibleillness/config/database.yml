@@ -23,3 +23,5 @@ test:
 production:
   <<: *default
   database: invisible_illness_production
+  username: invisible_illness
+  password: <%= ENV['INVISIBLE_ILLNESS_DATABASE_PASSWORD'] %>
