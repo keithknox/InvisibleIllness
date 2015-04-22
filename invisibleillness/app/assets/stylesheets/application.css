@@ -88,4 +88,41 @@
      text-decoration:none;
  }
 
- 
+ .section {
+   height: 800px;
+   width: 800px;
+   margin-top: 50px;
+   margin-left: 300px;
+   -webkit-animation-delay: 2s;
+   animation-delay: 2s;
+ }
+
+ .section div {
+     width: 200px;
+     height: 200px;
+     float: left;
+ }
+
+ .section div:nth-child(3n+1){
+   clear: both;
+
+ }
+
+ .focus{
+   width: 200px;
+   height: 200px;
+   background-color: white;
+   margin: 0;
+   padding: 0;
+
+ }
+
+ div img:hover{
+   -webkit-filter: grayscale(0%);
+  -webkit-transition: 1s ease-in-out;
+ }
+
+ div img {
+   -webkit-filter: grayscale(100%);
+  -webkit-transition: 1s ease-in-out;
+ }
