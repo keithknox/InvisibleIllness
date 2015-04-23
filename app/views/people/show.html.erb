@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <%= link_to("#InvisibleIllness", 'https://twitter.com/hashtag/InvisibleIllness', :target => "_blank") %>
 </header>
 =======
+=======
+<!-- Javascript for Facebook -->
+
+>>>>>>> f2ce1806b985f23aa7aa34bad75789800d1de4f9
 <meta property="og:title" content="title" />
 <meta property="og:description" content="description" />
 <meta property="og:image" content="thumbnail_image" />
@@ -25,19 +30,49 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<% if user_signed_in? %>
-  <h1>You are logged in as an admin</h1>
-  <%= link_to("Admin Home", '/admin') %>
-  <%= button_to('Delete Story', @person, method: :delete) %>
-  <%= button_to('Edit Story', edit_person_path(@person), method: :get) %>
-<% end %>
 
-<h2> <%= @person.name %></h2>
-<h2> <img src="<%= @person.image_url %>" width=200/></h2>
-<h2> <%= @person.story %></h2>
-<h2>Donate:</h2>
-<h2><a href="<%= @person.charity_url %>"><%= @person.charity_name %></a></h2>
-<h2> <a href="<%= @person.personal_website %>">Personal Website</a></h2>
+<!-- Page Body -->
+
+<div class = "person_bio">
+  <%= image_tag(@person.image_url, height: '400', width: '400')%>
+
+  <div class= "buttons">
+    <% @three_people.each do |person| %>
+      <%= link_to(image_tag(person.image_url), person_path(person)) %>
+
+    <% end %>
+  </div>
+  <div class="info">
+    <h1> Meet <%= @person.name.split.first %> </h1>
+    <p> Washington, DC</p>
+    <h2>Chronic Illness Advocate;<br/>
+        ePatient Scholar; and Program Analyst</h2>
+    <div class="blurb">
+      <%= image_tag('20years.png')%>
+
+      <p>Living with chronic illness</p>
+    </div>
+  </div>
+
+
+  <div class="quote">
+    <p><%= @person.story %></p>
+  </div>
+
+  <div class="action">
+    <a href = "<%= @person.charity_url %>">Learn More About <%= @person.illness.name %></a>
+  </div>
+
+  <div class = "disease">
+    <div class = "placeholder">
+    </div>
+    <h2> <%= @person.illness.statistics %></h2>
+    <p> <%= @person.illness.blurb %> <a href = "<%= @person.illness.charity_url %>">For more information about <%= @person.illness.name %>...</a></p>
+  </div>
+
+  <div class= "button"><%= link_to 'Submit User Story', new_person_path, method: :get %></div>
+</div>
+
 
 
 <!-- Twitter Share Button -->
@@ -49,24 +84,26 @@
 <script type="IN/Share"></script>
 
 <!-- Facebook Buttons -->
-<div class="fb-share-button" data-href="https://salty-journey-2304.herokuapp.com/" picture="http://media.npr.org/assets/img/2015/03/08/00-medx-2014-question-rs-943a8c6e10daa9f32683ac053e816ad43acaed1e-s800-c85.jpg" caption="Testing" data-layout="button"></div>
+<div class="fb-share-button" data-href="https://salty-journey-2304.herokuapp.com/" data-layout="button"></div>
 
 
+
+<!--
 <h2>
-<% other_people = @people.where.not(id: @person.id) %>
-<% other_people.each do |person| %>
-    <%= link_to(image_tag(person.image_url, width: '150'), person_path(person)) %>
+<%# other_people = @people.where.not(id: @person.id) %>
+<%# other_people.each do |person| %>
+    <%#= link_to(image_tag(person.image_url, width: '150'), person_path(person)) %>
 
-<% end %>
+<%# end %>
 
 <hr>
 
 <h2> Illness Description<h2>
-<h2> About <%= @person.illness.name %> </h2>
-<h3><%= @person.illness.statistics %> </h3>
-<h3><%= @person.illness.quote %> </h3>
-  <h3><%= @person.illness.blurb %> </h3>
+<h2> About <%#= @person.illness.name %> </h2>
+<h3><%#= @person.illness.statistics %> </h3>
+<h3><%#= @person.illness.quote %> </h3>
+  <h3><%#= @person.illness.blurb %> </h3>
 
 
 <hr>
-<%= button_to('Submit User Story', new_person_path, method: :get) %>
+<%#= button_to('Submit User Story', new_person_path, method: :get) %> -->
