@@ -21,7 +21,7 @@ class PeopleController < ApplicationController
 
     if @person.save
       binding.pry
-      redirect_to @person
+      render :confirmation
     else
       render :new
     end
@@ -35,7 +35,7 @@ class PeopleController < ApplicationController
   def update
     @person = Person.find(params[:id])
     @person.update!(person_params)
-    redirect_to(@person)
+    redirect_to '/admin'
   end
 
   def destroy
