@@ -1,0 +1,17 @@
+
+      <div class = "section animated fadeIn">
+        <div><%= image_tag("1a.png")%></div>
+        <div><%= image_tag("3a.png")%></div>
+        <div><%= image_tag("5a.png")%></div>
+        <div><%= image_tag("10a.png")%></div>
+        <div><p class = "focus">Think you know what Invisible Illness looks like?</p></div>
+        <div><%= image_tag("9a.png")%></div>
+        <div><%= image_tag("6a.png")%></div>
+        <div><%= image_tag("7a.png")%></div>
+        <div><%= image_tag("8a.png")%></div>
+      </div>
+
+
+<% @people.each do |person| %>
+<%= link_to(image_tag(person.image_url), person_path(person)) %>
+<% end %>
