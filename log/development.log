@@ -34,3 +34,59 @@ Started GET "/" for 127.0.0.1 at 2015-04-23 12:11:04 -0400
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-23 14:58:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 324ms (Views: 312.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-100192b17dcd644707c7212c371d0cf43da5b471f23a4b1fe22a13aa3caa4b09.css?body=1" for 127.0.0.1 at 2015-04-23 14:58:33 -0400
+
+
+Started GET "/people" for 127.0.0.1 at 2015-04-23 14:58:53 -0400
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 70ms (Views: 63.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-23 15:10:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 205ms (Views: 193.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-23 15:13:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 225ms (Views: 212.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-892b1039727f3ab716b3014ef65aa746cff0f182e8b6d3de437323daf27a42ec.css?body=1" for 127.0.0.1 at 2015-04-23 15:13:34 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-23 15:15:57 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 72ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-515a908d84aac514335b9f9bd19941b0db1ad4a16501bbfbdb453fd7070535db.css?body=1" for 127.0.0.1 at 2015-04-23 15:15:57 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-23 15:16:04 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 78ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-04-23 15:16:06 -0400
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 70ms (Views: 63.3ms | ActiveRecord: 1.4ms)
