@@ -14,13 +14,14 @@
  *= require_self
  */
 
+/*Main Layout*/
 
  body {
    background-color: #4a4a4a;
  }
 
 
-
+/*Intro Page*/
  .intro{
   margin-top: 125px;
   margin-left: 400px;
@@ -90,6 +91,9 @@
      text-decoration:none;
  }
 
+
+ /*People.index.html.erb*/
+
  .section {
    height: 800px;
    width: 800px;
@@ -121,16 +125,18 @@
    display: inline-block;
    }
 
- div img:hover{
+ .section img:hover{
    -webkit-filter: grayscale(0%);
   -webkit-transition: .5s ease-in-out;
  }
 
- div img {
+ .section img {
    -webkit-filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
  }
 
+
+/*People.show.html.erb*/
 
 .person_bio {
   margin-top: 25px;
@@ -197,8 +203,8 @@
 
 .person_bio .blurb p {
   float: right;
-  margin-top: 50px;
-  padding-right: 25px;
+  margin-top: 80px;
+  padding-right: 60px;
   color: #014f8b;
   font-size: 25px;
 }
