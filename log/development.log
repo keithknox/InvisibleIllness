@@ -32,3 +32,17 @@ Processing by PeopleController#index as HTML
   [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
   Rendered people/index.html.erb within layouts/application (19.2ms)
 Completed 200 OK in 90ms (Views: 88.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-23 11:28:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 327ms (Views: 314.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-04-23 11:28:36 -0400
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 105ms (Views: 96.8ms | ActiveRecord: 1.1ms)
