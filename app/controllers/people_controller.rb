@@ -7,7 +7,8 @@ class PeopleController < ApplicationController
   end
 
   def show
-    @people = Person.all
+    # all_people = Person.all
+    @three_people = Person.all.sample(3)
     @person = Person.find(params[:id])
   end
 
@@ -20,7 +21,6 @@ class PeopleController < ApplicationController
     @person = Person.new(person_params)
 
     if @person.save
-      binding.pry
       render :confirmation
     else
       render :new
