@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insivible Illness</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% flash.each do |key, value| %>
+     <div class="flash <%= key %>" style="color:white"><%= value %></div>
+   <% end %>
+
+  <header><%= image_tag("usa_today_logo.png")%></header>
+  <div class= "t_link">
+<%= yield %>
+
+</body>
+</html>

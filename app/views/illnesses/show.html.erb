@@ -1,0 +1,16 @@
+<h1> *****PAGE 3****** </h1>
+<%= link_to("Illness Home Page", '/illnesses') %>
+
+<h1>Show all people with <%= @illness.name %> </h1>
+
+<% @people.each do |person| %>
+  <h2><%= person.name %><br></h2>
+  <%= link_to(image_tag(person.image_url ), illness_person_path(@illness, person)) %>
+<% end %>
+
+
+
+
+
+
+<br>

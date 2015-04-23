@@ -1,0 +1,22 @@
+As a User, when I visit the landing page, I should see:
+    --definition/description of an invisibile illness
+    --different types of invisible illness
+    --a link to people sharing their experiences with invisible illnesses
+
+
+As a User, when I visit the individual illness page, I should see:
+    --a definition/description of a specific illness
+    --a link to a person's bio/video page
+    --a link to view all user submitted stories
+
+
+As a User, when I visit a person's bio/story page I should see:
+    --their story video
+    --a brief biography
+    --user comments
+    --links to organizations (for more information or donations)
+    --links to share with social media
+
+As a User, when I submit a story, I should see
+    --a form to submit the story
+    --a link to submit a picture and/or video
