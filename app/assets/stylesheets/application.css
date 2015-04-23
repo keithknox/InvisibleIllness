@@ -14,117 +14,238 @@
  *= require_self
  */
  body {
-   background-color: #4a4a4a;
- }
-
-
-
- .intro{
-  margin-top: 125px;
-  margin-left: 400px;
- padding-top: 25px;
- padding-left: 25px;
- font-family: Arial;
- color: white;
- font-size: 18px;
- height: 400px;
- width: 860px;
- border-radius: 50px;
- }
-
-.intro h1{
-  margin: 0;
-  padding: 0;
+  background-color: #4a4a4a;
+  font-family: Arial;
 }
 
-.intro p{
-  margin: 0;
-  padding: 0;
-  color: #b9b7b5;
+.main{
+padding-top: 25px;
+padding-left: 25px;
+font-family: Helvetica;
+font-size: 18px;
+height: 400px;
+width: 860px;
+background-color: white;
+border: 2px solid;
+border-radius: 50px;
+
+
 }
 
-.intro .large {
-  color: white;
+.description{
+  padding-top: 25px;
+  padding-left: 25px;
+  font-family: Helvetica;
+  font-size: 18px;
+  height: 400px;
+  width: 860px;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 50px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+
+  }
+
+.round-button {
+	width:10%;
+
+}
+.round-button-circle {
+	/*margin: 100px;*/
+  width: 100%;
+	height:0;
+	padding-bottom: 100%;
+    border-radius: 50%;
+	/*border:10px solid #cfdcec;
+    overflow:hidden;*/
+
+    background: #4679BD;
+    box-shadow: 0 0 3px gray;
+}
+.round-button-circle:hover {
+	background:#30588e;
+}
+.round-button a {
+    display:block;
+	float:left;
+	width:100%;
+	padding-top:50%;
+    padding-bottom:50%;
+	line-height:.5em;
+	margin-top:-0.25em;
+
+	text-align:center;
+	color:#e2eaf3;
+    font-family:Verdana;
+    font-size:1em;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+
+.section {
+  height: 800px;
+  width: 800px;
+  margin-top: 200px;
+  margin-left: 200px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.section div {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.section div:nth-child(3n+1){
+  clear: both;
+
+}
+
+.section p{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+
+}
+
+.section div img:hover{
+  -webkit-filter: grayscale(0%);
+ -webkit-transition: 1s ease-in-out;
+}
+
+.section div img {
+  -webkit-filter: grayscale(100%);
+ -webkit-transition: 1s ease-in-out;
+}
+
+
+.person_bio {
+  margin-top: 25px;
+  height: 680px;
+  background-color: #d8d8d8;
+
+}
+
+.person_bio img {
   margin-top: 20px;
-  margin-left: 10px;
-  padding: 0;
-  font-size: 40px;
-  font-weight: bold;
+  margin-left: 30px;
+  float: left;
+
 }
 
- .round-button {
- 	width:7.5%;
-   }
- .round-button-circle {
-   float: left;
-  margin: 25px 15px;
-   width: 100%;
- 	height:0;
- 	padding-bottom: 100%;
-     border-radius: 50%;
- 	/*border:10px solid #cfdcec;*/
-     overflow:hidden;
 
-     background: #009BFF;
-     box-shadow: 0 0 3px gray;
- }
- .round-button-circle:hover {
- 	background:#30588e;
- }
- .round-button a {
-     display:block;
- 	float:left;
- 	width:100%;
- 	padding-top:50%;
-     padding-bottom:50%;
- 	line-height:.5em;
- 	margin-top:-0.25em;
+.person_bio .buttons{
+  float: right;
+  width: 200px;
+  margin: 15px 25px 20px 0px;
+  margin-right: 25px;
+    }
 
- 	text-align:center;
- 	color:#e2eaf3;
-     font-family:Arial;
-     font-size:1em;
-     font-weight:bold;
-     text-decoration:none;
- }
+.person_bio .buttons img{
+  margin: 5px auto;
 
- .section {
-   height: 800px;
-   width: 800px;
-   margin-top: 50px;
-   margin-left: 300px;
-   -webkit-animation-delay: .5s;
-   animation-delay: .5s;
- }
+}
 
- .section div {
-     width: 200px;
-     height: 200px;
-     float: left;
- }
+.person_bio .buttons img:hover{
+  -webkit-filter: grayscale(0%);
+ -webkit-transition: 1s ease-in-out;
+}
 
- .section div:nth-child(3n+1){
-   clear: both;
+.person_bio .buttons img {
+  -webkit-filter: grayscale(100%);
+ -webkit-transition: 1s ease-in-out;
+}
 
- }
 
- .focus{
-   width: 200px;
-   height: 200px;
-   font-family: Arial;
-   font-size: 30px;
-   color: white;
-   text-align: center;
-   vertical-align: middle;
-   display: inline-block;
-   }
+.person_bio .info {
+  width: 570px;
+  height: 200px;
+  float: left;
+  margin-top: 20px;
+  padding: 10px;
+  color: #4a4a4a;
+}
 
- div img:hover{
-   -webkit-filter: grayscale(0%);
-  -webkit-transition: .5s ease-in-out;
- }
+.person_bio .info h1{
+  width: 37;
+  float: left;
+  margin-top: 16px;
+}
 
- div img {
-   -webkit-filter: grayscale(100%);
-  -webkit-transition: .5s ease-in-out;
- }
+.person_bio .info p{
+  float: right;
+  display: inline-block;
+  margin-top: 21px;
+  padding-right: 25px;
+}
+
+.person_bio .info h2{
+  float: left;
+}
+
+.person_bio .blurb p {
+  float: right;
+  margin-top: 50px;
+  padding-right: 25px;
+  color: #014f8b;
+  font-size: 25px;
+}
+
+.person_bio .quote {
+  width: 750px;
+  height: 220px;
+  float: left;
+  margin-left: 30px;
+  font-size: 34px;
+  color: #4a4a4a;
+
+}
+
+.person_bio .action {
+  height: 200px;
+  width: 240px;
+  float: left;
+}
+
+.disease {
+  height: 200px;
+  width: 1000px;
+  margin-top: 20px;
+  float: left;
+  }
+
+  .disease h2{
+    color: white;
+    padding-top: 10px;
+
+  }
+
+  .disease p{
+    margin: 20px;
+    clear: both;
+    color: #848889;
+    font-size: 20px;
+  }
+
+.disease .placeholder{
+  height: 50px;
+  width: 50px;
+  background-color: #4a90e2;
+  float: left;
+  margin: 20px;
+
+}
+
+.button {
+  height: 200px;
+  width: 200px;
+  float: right;
+  background-color: #4a90e2;
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+
+}
