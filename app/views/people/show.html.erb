@@ -1,9 +1,25 @@
-<header><%= link_to(image_tag("usa_today_logo.png"), '/')%>
-<%= link_to("#InvisibleIllness", 'https://twitter.com/hashtag/InvisibleIllness', :target => "_blank") %>
-</header>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="thumbnail_image" />
 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '598208910316183',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
 
-<!-- <h1> *****PAGE 3****** </h1> -->
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <% if user_signed_in? %>
   <h1>You are logged in as an admin</h1>
   <%= link_to("Admin Home", '/admin') %>
@@ -17,6 +33,19 @@
 <h2>Donate:</h2>
 <h2><a href="<%= @person.charity_url %>"><%= @person.charity_name %></a></h2>
 <h2> <a href="<%= @person.personal_website %>">Personal Website</a></h2>
+
+
+<!-- Twitter Share Button -->
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="Meet the people putting a public face to #invisibleillness" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- LinkedIn Share Button -->
+<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+<script type="IN/Share"></script>
+
+<!-- Facebook Buttons -->
+<div class="fb-share-button" data-href="https://salty-journey-2304.herokuapp.com/" picture="http://media.npr.org/assets/img/2015/03/08/00-medx-2014-question-rs-943a8c6e10daa9f32683ac053e816ad43acaed1e-s800-c85.jpg" caption="Testing" data-layout="button"></div>
+
 
 <h2>
 <% other_people = @people.where.not(id: @person.id) %>
