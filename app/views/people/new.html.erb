@@ -1,6 +1,8 @@
 <h2>Submit your story here:</h2>
 
 <%= form_for @person, url: {action: "create"} do |f| %>
+  <% f.hidden_field :user_submitted, :value => true %>
+
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>

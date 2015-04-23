@@ -3,11 +3,14 @@ class PeopleController < ApplicationController
   before_action :authenticate_user!, except: [:new, :create, :index, :show]
 
   def index
-    @people = Person.all
+    @people = Person.where(user_submitted:false)
+  end
+
+  def user_submitted
+    @people = Person.where(user_submitted:true)
   end
 
   def show
-    # all_people = Person.all
     @three_people = Person.all.sample(3)
     @person = Person.find(params[:id])
   end
@@ -19,7 +22,7 @@ class PeopleController < ApplicationController
 
   def create
     @person = Person.new(person_params)
-
+    binding.pry
     if @person.save
       render :confirmation
     else
@@ -49,10 +52,11 @@ class PeopleController < ApplicationController
   end
 
 
+
   private
 
   def person_params
-    return params[:person].permit(:name, :image_url, :video_url, :illness_id, :story)
+    return params[:person].permit(:name, :image_url, :video_url, :illness_id, :story, :user_submitted)
   end
 
 end

@@ -1,0 +1,5 @@
+<div class = "section animated fadeIn">
+  <% @people.each do |person| %>
+    <div><%= link_to(image_tag(person.image_url), person_path(person)) %></div>
+  <% end %>
+</div>
