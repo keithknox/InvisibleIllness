@@ -11,8 +11,13 @@ class PeopleController < ApplicationController
   end
 
   def show
-    @three_people = Person.all.sample(3)
     @person = Person.find(params[:id])
+    if @person.user_submitted
+      @three_people = Person.where(user_submitted:true).sample(3)
+    else
+      @three_people = Person.where(user_submitted:false).sample(3)
+    end
+
   end
 
   def new
@@ -22,7 +27,6 @@ class PeopleController < ApplicationController
 
   def create
     @person = Person.new(person_params)
-    binding.pry
     if @person.save
       render :confirmation
     else

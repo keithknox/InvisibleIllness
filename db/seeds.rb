@@ -9,18 +9,18 @@ anxiety = Illness.create(
   name:"Anxiety",
   statistics:"Anxiety disorders are the most common mental illness in the US, affecting 40 million adults in the United States.",
   blurb:"Generalized anxiety disorder is characterized by persistent, excessive, and unrealistic worry about everyday things.",
-  charity_url:"www.google.com")
+  charity_url:"http://www.adaa.org/")
 
 ibd = Illness.create(
   name:"IBD",
   statistics:"Approximately 1.6 million Americans currently have IBD.",
-  blurb:"Inflammatory bowel disease (IBD) involves chronic inflammation of all or part of your digestive tract. IBD primarily includes ulcerative colitis and Crohn's disease. Both usually involve severe diarrhea, pain, fatigue and weight loss. For more information...",
-  charity_url:"www.google.com")
+  blurb:"Inflammatory bowel disease (IBD) involves chronic inflammation of all or part of your digestive tract. IBD primarily includes ulcerative colitis and Crohn's disease. Both usually involve severe diarrhea, pain, fatigue and weight loss.",
+  charity_url:"http://online.ccfa.org/site/TR/TakeSteps/Chapter-GreaterWashingtonDCVirginia?")
 
 lupus = Illness.create(
     name:"Lupus",
     statistics:"It's estimated that 1.5 million Americans, and at least five million people worldwide, have a form of lupus.",
-    blurb:"Lupus is a chronic inflammatory disease that occurs when your body's immune system attacks your own tissues and organs. Inflammation caused by lupus can affect many different body systems — including your joints, skin, kidneys, blood cells, brain, heart and lungs. For more information...",
+    blurb:"Lupus is a chronic inflammatory disease that occurs when your body's immune system attacks your own tissues and organs. Inflammation caused by lupus can affect many different body systems — including your joints, skin, kidneys, blood cells, brain, heart and lungs.",
     charity_url:"www.google.com")
 
 ibd.people.create(
@@ -120,6 +120,6 @@ anxiety.people.create(
   video_url: "www.google.com",
   story:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sedquis purus. Morbi nec mi sed risus viverra interdum vitae sed ex.",
   charity_name:"Anxiety and Depression Association of America",
-  charity_url:"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CB8QFjAA&url=http%3A%2F%2Fwww.adaa.org%2F&ei=CzQ5VeXOCMnSggSrxoCgCA&usg=AFQjCNEcz7Tfg7Z4XuRm8--fmo48KIxQ2Q&sig2=kV_jMZqW_3rxyq5pixMgUQ&bvm=bv.91427555,d.eXY",
+  charity_url:"http://www.adaa.org/",
   personal_website:"www.google.com",
   user_submitted: false)
