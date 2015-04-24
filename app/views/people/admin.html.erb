@@ -3,7 +3,7 @@
 <hr>
 <% @people.each do |person| %>
   <h2> <%= person.name %></h2>
-  <h2> <img src="<%= person.image_url %>" width=200/></h2>
+  <%= image_tag(person.image_url, width: '200') %>
   <h2> <%= person.story %></h2>
   <%= button_to('Delete Story', person, method: :delete) %>
   <%= button_to('Edit Story', edit_person_path(person), method: :get) %>
