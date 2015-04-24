@@ -16,23 +16,40 @@
 
 /*Main Layout*/
 
- body {
-   background-color: #4a4a4a;
+  body {
+    background-color: #4a4a4a;
  }
+
+ .header {
+  width: 297px;
+  height: 80px;
+ }
+
+ .hashtag {
+  margin-top: -60px;
+  text-align: right;
+ }
+
+ .hashtag a {
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 27px;
+  color: white;
+}
 
 
 /*Intro Page*/
  .intro{
   margin-top: 125px;
   margin-left: 400px;
- padding-top: 25px;
- padding-left: 25px;
- font-family: Arial;
- color: white;
- font-size: 18px;
- height: 400px;
- width: 860px;
- border-radius: 50px;
+  padding-top: 25px;
+  padding-left: 25px;
+  font-family: Arial;
+  color: white;
+  font-size: 18px;
+  height: 400px;
+  width: 860px;
+  border-radius: 50px;
  }
 
  .intro h1{
@@ -58,209 +75,252 @@
  .round-button {
    width:7.5%;
    }
+
  .round-button-circle {
-   float: left;
+  float: left;
   margin: 25px 15px;
-   width: 100%;
-   height:0;
-   padding-bottom: 100%;
-     border-radius: 50%;
-   /*border:10px solid #cfdcec;*/
-     overflow:hidden;
-
-     background: #009BFF;
-     box-shadow: 0 0 3px gray;
+  width: 100%;
+  height:0;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  overflow:hidden;
+  background: #009BFF;
+  box-shadow: 0 0 3px gray;
  }
+
  .round-button-circle:hover {
-   background:#30588e;
+  background:#30588e;
  }
- .round-button a {
-     display:block;
-   float:left;
-   width:100%;
-   padding-top:50%;
-     padding-bottom:50%;
-   line-height:.5em;
-   margin-top:-0.25em;
 
-   text-align:center;
-   color:#e2eaf3;
-     font-family:Arial;
-     font-size:1em;
-     font-weight:bold;
-     text-decoration:none;
+ .round-button a {
+  display:block;
+  float:left;
+  width:100%;
+  padding-top:50%;
+  padding-bottom:50%;
+  line-height:.5em;
+  margin-top:-0.25em;
+  text-align:center;
+  color:#e2eaf3;
+  font-family:Arial;
+  font-size:1em;
+  font-weight:bold;
+  text-decoration:none;
  }
 
 
  /*People.index.html.erb*/
 
  .section {
-   height: 800px;
-   width: 800px;
-   margin-top: 50px;
-   margin-left: 300px;
-   -webkit-animation-delay: .5s;
-   animation-delay: .5s;
+  height: 800px;
+  width: 800px;
+  margin-top: 50px;
+  margin-left: 300px;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
  }
 
  .section div {
-     width: 200px;
-     height: 200px;
-     float: left;
+  width: 200px;
+  height: 200px;
+  float: left;
  }
 
  .section div:nth-child(3n+1){
-   clear: both;
-
+  clear: both;
  }
 
  .focus{
-   width: 200px;
-   height: 200px;
-   font-family: Arial;
-   font-size: 30px;
-   color: white;
-   text-align: center;
-   vertical-align: middle;
-   display: inline-block;
-   }
+  width: 200px;
+  height: 200px;
+  font-family: Arial;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+ }
 
  .section img:hover{
-   -webkit-filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
   -webkit-transition: .5s ease-in-out;
- }
+  }
 
  .section img {
-   -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
- }
+  }
 
 
 /*People.show.html.erb*/
 
-.person_bio {
+  .person_bio {
   margin-top: 25px;
   height: 680px;
   background-color: #d8d8d8;
+  }
 
-}
-
-.person_bio img {
+  .person_bio img {
   margin-top: 20px;
   margin-left: 30px;
   float: left;
-}
+  }
 
 
-.person_bio .buttons{
+  .person_bio .buttons{
   float: right;
   width: 200px;
   margin: 15px 25px 20px 0px;
   margin-right: 25px;
-    }
+  }
 
-.person_bio .buttons img{
+  .person_bio .buttons img{
   margin: 5px auto;
+  }
 
-}
-
-.person_bio .buttons img:hover{
+  .person_bio .buttons img:hover{
   -webkit-filter: grayscale(0%);
- -webkit-transition: 1s ease-in-out;
-}
+  -webkit-transition: 1s ease-in-out;
+  }
 
-.person_bio .buttons img {
+  .person_bio .buttons img {
   -webkit-filter: grayscale(100%);
- -webkit-transition: 1s ease-in-out;
-}
+  -webkit-transition: 1s ease-in-out;
+  }
 
 
-.person_bio .info {
+  .person_bio .info {
   width: 570px;
   height: 200px;
   float: left;
   margin-top: 20px;
   padding: 10px;
   color: #4a4a4a;
-}
+  }
 
-.person_bio .info h1{
+  .person_bio .info h1{
   width: 37;
   float: left;
   margin-top: 16px;
-}
+  }
 
-.person_bio .info p{
+  .person_bio .info p{
   float: right;
   display: inline-block;
   margin-top: 21px;
   padding-right: 25px;
 }
 
-.person_bio .info h2{
+  .person_bio .info h2{
   float: left;
-}
+  }
 
-.person_bio .blurb p {
+  .person_bio .blurb p {
   float: right;
   margin-top: 80px;
   padding-right: 60px;
   color: #014f8b;
   font-size: 25px;
-}
+  }
 
-.person_bio .quote {
+  .person_bio .quote {
   width: 750px;
   height: 220px;
   float: left;
   margin-left: 30px;
   font-size: 34px;
   color: #4a4a4a;
+  }
 
-}
-
-.person_bio .action {
+  .person_bio .action {
   height: 200px;
   width: 240px;
   float: left;
-}
+  }
 
-.disease {
+  .disease {
   height: 200px;
-  width: 1000px;
+  width: 900px;
   margin-top: 20px;
   float: left;
   }
 
   .disease h2{
-    color: white;
-    padding-top: 10px;
-
+  color: white;
+  padding-top: 10px;
   }
 
   .disease p{
-    margin: 20px;
-    clear: both;
-    color: #848889;
-    font-size: 20px;
+  margin: 20px;
+  clear: both;
+  color: #848889;
+  font-size: 20px;
   }
 
-.disease .placeholder{
+  .disease .placeholder{
   height: 50px;
   width: 50px;
   background-color: #4a90e2;
   float: left;
   margin: 20px;
+  }
 
-}
-
-.button {
-  height: 200px;
-  width: 200px;
+  .submit {
   float: right;
-  background-color: #4a90e2;
-  margin: 20px;
-  display: inline-block;
-  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  margin-left: 10px;
+  }
 
-}
+  .submit .round-button {
+  width:100%;
+  }
+
+  .submit .round-button-circle {
+  float: left;
+  margin: 25px 15px;
+  width: 100%;
+  height:0;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  overflow:hidden;
+  background: #009BFF;
+  box-shadow: 0 0 3px gray;
+  }
+
+  .submit .round-button-circle:hover {
+  background:#30588e;
+  }
+
+  .submit .round-button a {
+  display:block;
+  float:left;
+  width:100%;
+  padding-top:50%;
+  padding-bottom:50%;
+  line-height:.75em;
+  margin-top:-0.25em;
+  text-align:center;
+  color:#e2eaf3;
+  font-family:Arial;
+  font-size:.75em;
+  font-weight:bold;
+  text-decoration:none;
+  }
+
+  .share li{
+  display: inline;
+  float: left;
+  height: 30px;
+  width: 30px;
+  clear: both;
+  }
+
+  /*User Story Form*/
+
+  .user_story_form {
+  font-family: Arial;
+  font-size: 27px;
+  color: white;
+  }

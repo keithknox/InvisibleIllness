@@ -1,59 +1,39 @@
-<% if @person.errors.any? %>
-  <b>Errors:</b>
-  <ul>
-    <% @person.errors.full_messages.each do |msg| %>
-      <li style="color:red"><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
+<div class = "user_story_form">
 
 <h2>Submit your story here:</h2>
 
+
+
 <%= form_for @person, url: {action: "create"} do |f| %>
-  <% f.hidden_field :user_submitted, :value => true %>
-
   <p>
-    <%= f.label :name, "Name:"%><br>
-    <%= f.text_field :name, :size=>"52" %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </p>
 
   <p>
-    <%= f.label :title, "Job Title"%><br>
-    <%= f.text_area :story, :size=>"50x1" %>
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
   </p>
 
   <p>
-    <%= f.label :city, "Your City:"%><br>
-    <%= f.text_area :story, :size=>"50x1" %>
+    <%= f.label :video_url %><br>
+    <%= f.text_field :video_url %>
   </p>
 
   <p>
-    <%= f.label :image_url, "Link to an image of yourself:" %><br>
-    <%= f.text_field :image_url, :size=>"52" %>
+  <%= f.label :illness_id %><br>
+  <%= f.collection_select :illness_id, @illnesses, :id, :name %>
+
   </p>
 
   <p>
-    <%= f.label :video_url, "Link to a video of yours:"%><br>
-    <%= f.text_field :video_url, :size=>"52" %>
+    <%= f.label :story %><br>
+    <%= f.text_area :story %>
   </p>
-
-  <p>
-  <%= f.label :illness_id, "What do you suffer from?"%><br>
-  <%= f.collection_select :illness_id, @illnesses, :id, :name, :size=>"52" %>
-  </p>
-
-  <p>
-    <%= f.label :story, "Share your story:"%><br>
-    <%= f.text_area :story, :size => "50x10" %>
-  </p>
-
 
   <p>
     <%= f.submit value: "Submit"%>
   </p>
+
+</div>
 <% end %>
-
-
-<h1>Thanks for submitting!</h1>
-
-<%= link_to("Illnesses", illnesses_path) %>
