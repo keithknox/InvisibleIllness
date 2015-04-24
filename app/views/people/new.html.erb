@@ -1,4 +1,8 @@
+<div class = "user_story_form">
+
 <h2>Submit your story here:</h2>
+
+
 
 <%= form_for @person, url: {action: "create"} do |f| %>
   <p>
@@ -30,4 +34,6 @@
   <p>
     <%= f.submit value: "Submit"%>
   </p>
+
+</div>
 <% end %>
