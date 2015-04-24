@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
 #current_user
-  before_action :authenticate_user!, except: [:new, :create, :index, :show]
+  before_action :authenticate_user!, except: [:new, :create, :index, :show, :user_submitted, :video]
 
   def index
     @people = Person.where(user_submitted:false)
@@ -56,7 +56,9 @@ class PeopleController < ApplicationController
     @people = Person.all
   end
 
-
+  def video
+    @person = Person.find(params[:id])
+  end
 
   private
 
