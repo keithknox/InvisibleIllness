@@ -1,0 +1,109 @@
+<!-- Javascript for Facebook -->
+
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="thumbnail_image" />
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '598208910316183',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<!-- Page Body -->
+
+<div class = "person_bio">
+  <%= image_tag(@person.image_url, height: '400', width: '400')%>
+
+  <div class= "buttons">
+    <% @three_people.each do |person| %>
+      <%= link_to(image_tag(person.image_url), person_path(person)) %>
+
+    <% end %>
+  </div>
+  <div class="info">
+    <h1> Meet <%= @person.name.split.first %> </h1>
+    <p> Washington, DC</p>
+    <h2>Chronic Illness Advocate;<br/>
+        ePatient Scholar; and Program Analyst</h2>
+    <div class="blurb">
+      <%= image_tag('20years.png')%>
+
+      <p>Living with chronic illness</p>
+    </div>
+  </div>
+
+
+  <div class="quote">
+    <p><%= @person.story %></p>
+  </div>
+
+  <div class="action">
+    <a href = "<%= @person.charity_url %>">Learn More About <%= @person.illness.name %></a>
+  </div>
+
+  <div class = "disease">
+    <div class = "placeholder">
+    </div>
+    <h2> <%= @person.illness.statistics %></h2>
+    <p> <%= @person.illness.blurb %> <a href = "<%= @person.illness.charity_url %>">For more information about <%= @person.illness.name %>...</a></p>
+  </div>
+
+  <div class="submit">
+  <div class="round-button"><div class="round-button-circle"><%= link_to 'Submit User Story', new_person_path, method: :get %></a></div>
+  <!-- <div class= "button"><%= link_to 'Submit User Story', new_person_path, method: :get %></div> -->
+</div>
+
+
+
+
+    <!-- Twitter Share Button -->
+
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Meet the people putting a public face to #invisibleillness" data-count="none">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}(document, 'script', 'twitter-wjs');</script>
+
+
+    <!-- LinkedIn Share Button -->
+
+        <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+        <script type="IN/Share"></script>
+
+
+    <!-- Facebook Buttons -->
+
+        <div class="fb-share-button" data-href="https://salty-journey-2304.herokuapp.com/" data-layout="button"></div>
+
+
+
+<!--
+<h2>
+<%# other_people = @people.where.not(id: @person.id) %>
+<%# other_people.each do |person| %>
+    <%#= link_to(image_tag(person.image_url, width: '150'), person_path(person)) %>
+
+<%# end %>
+
+<hr>
+
+<h2> Illness Description<h2>
+<h2> About <%#= @person.illness.name %> </h2>
+<h3><%#= @person.illness.statistics %> </h3>
+<h3><%#= @person.illness.quote %> </h3>
+  <h3><%#= @person.illness.blurb %> </h3>
+
+
+<hr>
+<%#= button_to('Submit User Story', new_person_path, method: :get) %> -->
