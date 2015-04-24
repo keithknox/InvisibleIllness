@@ -30,6 +30,7 @@ class PeopleController < ApplicationController
     if @person.save
       render :confirmation
     else
+      @illnesses = Illness.all
       render :new
     end
   end
